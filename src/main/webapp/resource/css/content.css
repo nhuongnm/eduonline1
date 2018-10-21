@@ -1,0 +1,28 @@
+div#content{
+	min-height: 603px;
+	padding: 50px 10px 0px 40px;
+}
+div.row-style{
+	margin: 0px 0px 70px 0px;
+}
+div.item{
+	float: left;
+	background: #0A6CB9;
+	width: 170px;
+	height: 200px;
+	padding: 20px;
+	margin: 0px 60px;
+}
+div.item div.image{
+	margin-bottom: 30px;
+}
+div.item div.image > img{
+	width: 60%;
+	height: 60%;
+	margin-left: 30px;
+}
+div.item p{
+	color: #ffffff;
+	font-size: 1.1em;
+	font-weight: bold;
+}

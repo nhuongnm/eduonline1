@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="base.definition" template="/WEB-INF/views/layouts/main_content.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" type="template" value="/WEB-INF/views/templates/header.jsp" />
+        <put-attribute name="logo" type="template" value="/WEB-INF/views/templates/logo.jsp" />
+        <put-attribute name="user" type="template" value="/WEB-INF/views/templates/user.jsp" />
+        <put-attribute name="menu" type="template" value="/WEB-INF/views/templates/menu.jsp" />
+        <put-attribute name="content" type="template" value="/WEB-INF/views/templates/content.jsp" />
+        <put-attribute name="sidebar" type="template" value="/WEB-INF/views/templates/sidebar.jsp" />
+        <put-attribute name="footer" type="template" value="/WEB-INF/views/templates/footer.jsp" />
+    </definition>    
+    <definition name="base.definition.result" template="/WEB-INF/views/layouts/bankResult.jsp">
+        <put-attribute name="content" value=""/>
+    </definition>
+    <definition name="base.definition.login" template="/WEB-INF/views/layouts/main_login.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>    
+    <definition name="home-index" extends="base.definition.login">
+        <put-attribute name="title" value="" />
+        <put-attribute name="content" value="/WEB-INF/views/home/index.jsp" />
+    </definition>
+    <definition name="login-index" extends="base.definition.login">
+        <put-attribute name="title" value="Đăng nhập hệ thống" />
+        <put-attribute name="content" value="/WEB-INF/views/home/login.jsp" />
+    </definition>
+    <definition name="home-home" extends="base.definition">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content" value="/WEB-INF/views/home/home.jsp" />
+    </definition>
+    
+    <!-- user start -->
+    <definition name="user-list" extends="base.definition">
+        <put-attribute name="title" value="Danh sách nhân viên" />
+        <put-attribute name="content" value="/WEB-INF/views/user/list.jsp" />
+    </definition>
+    <definition name="user-create" extends="base.definition">
+        <put-attribute name="title" value="user create" />
+        <put-attribute name="content" value="/WEB-INF/views/user/create.jsp" />
+    </definition> 
+    <definition name="user-detail" extends="base.definition">
+        <put-attribute name="title" value="detail user" />
+        <put-attribute name="content" value="/WEB-INF/views/user/detail.jsp" />
+    </definition>    
+    <definition name="user-edit" extends="base.definition">
+        <put-attribute name="title" value="Edit user" />
+        <put-attribute name="content" value="/WEB-INF/views/user/edit.jsp" />
+    </definition> 
+    
+    <definition name="user-list-result" extends="base.definition.result">
+        <put-attribute name="title" value="Danh sách nhân viên" />
+        <put-attribute name="content" value="/WEB-INF/views/user/list-result.jsp" />
+    </definition>
+    <!-- user end -->
+    
+    <!-- category start -->
+    <definition name="category-list" extends="base.definition">
+        <put-attribute name="title" value="Danh sách Category" />
+        <put-attribute name="content" value="/WEB-INF/views/category/list.jsp" />
+    </definition>
+    <definition name="category-create" extends="base.definition">
+        <put-attribute name="title" value="category create" />
+        <put-attribute name="content" value="/WEB-INF/views/category/create.jsp" />
+    </definition> 
+    <definition name="category-detail" extends="base.definition">
+        <put-attribute name="title" value="category detail" />
+        <put-attribute name="content" value="/WEB-INF/views/category/detail.jsp" />
+    </definition>    
+    <definition name="category-edit" extends="base.definition">
+        <put-attribute name="title" value="category edit" />
+        <put-attribute name="content" value="/WEB-INF/views/category/edit.jsp" />
+    </definition> 
+    <!-- category end -->
+    
+    <!-- product-type start -->
+    <definition name="product-type-list" extends="base.definition">
+        <put-attribute name="title" value="Loại sản phẩm" />
+        <put-attribute name="content" value="/WEB-INF/views/product-type/list.jsp" />
+    </definition>
+    <definition name="product-type-create" extends="base.definition">
+        <put-attribute name="title" value="Loại sản phẩm" />
+        <put-attribute name="content" value="/WEB-INF/views/product-type/create.jsp" />
+    </definition> 
+    <definition name="product-type-detail" extends="base.definition">
+        <put-attribute name="title" value="Loại sản phẩm" />
+        <put-attribute name="content" value="/WEB-INF/views/product-type/detail.jsp" />
+    </definition>    
+    <definition name="product-type-edit" extends="base.definition">
+        <put-attribute name="title" value="Loại sản phẩm" />
+        <put-attribute name="content" value="/WEB-INF/views/product-type/edit.jsp" />
+    </definition> 
+    <!-- product-type end --> 
+    
+    <!-- user-role start -->
+    <definition name="user-role-list" extends="base.definition">
+        <put-attribute name="title" value="User" />
+        <put-attribute name="content" value="/WEB-INF/views/user-role/list.jsp" />
+    </definition>
+    <definition name="user-role-create" extends="base.definition">
+        <put-attribute name="title" value="xxx" />
+        <put-attribute name="content" value="/WEB-INF/views/user-role/create.jsp" />
+    </definition> 
+    <definition name="user-role-detail" extends="base.definition">
+        <put-attribute name="title" value="Loại sản phẩm" />
+        <put-attribute name="content" value="/WEB-INF/views/user-role/detail.jsp" />
+    </definition>
+    <!-- user-role end -->
+    
+    <!-- order start -->
+    <definition name="order-list" extends="base.definition">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/order/list.jsp" />
+    </definition>    
+    <definition name="order-detail" extends="base.definition">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/order/detail.jsp" />
+    </definition>
+    <definition name="order-create" extends="base.definition">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/order/create.jsp" />
+    </definition>
+    <!-- order end -->
+    
+    <!-- product start -->
+    <definition name="product-list" extends="base.definition">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/product/list.jsp" />
+    </definition>    
+    <definition name="product-detail" extends="base.definition">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/product/detail.jsp" />
+    </definition>
+    <definition name="product-create" extends="base.definition">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/product/create.jsp" />
+    </definition>
+    <definition name="product-create-result" extends="base.definition.result">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/product/create-result.jsp" />
+    </definition>
+    <definition name="product-list-result" extends="base.definition.result">
+        <put-attribute name="title" value="Đơn hàng" />
+        <put-attribute name="content" value="/WEB-INF/views/product/list-result.jsp" />
+    </definition> 
+    <!-- product end -->
+    
+</tiles-definitions>

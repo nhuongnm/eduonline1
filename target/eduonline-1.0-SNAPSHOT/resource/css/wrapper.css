@@ -1,0 +1,23 @@
+div#wrapper{
+	border: 1px solid black;
+}
+div#wrapper-1{
+	border: 1px solid #0B61B1;
+	border-top: none;
+	margin: 0px;
+	padding: 0px;
+}
+div#wrapper-2{
+	border: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+div#wrapper-2-1{
+	
+}
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}

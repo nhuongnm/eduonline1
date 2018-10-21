@@ -1,0 +1,12 @@
+div#footer{
+	font-family: Helvetica, Arial, sans-serif;
+	background: #1640A5;
+	padding: 15px;
+}
+div#footer > p{
+	color: #eeeeee;
+	margin: 0px 0px 0px 5px;
+	font-size: 0.9em;
+	font-weight: bold;
+	line-height: 1;
+}

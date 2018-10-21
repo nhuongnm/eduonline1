@@ -1,0 +1,36 @@
+div#header{
+	border: 1px solid #BDBFB7;
+	height: 120px;
+	background: #ffffff;
+}
+div#header-title{
+	padding: 20px 20px 20px 40px;
+}
+div#header-title > h4{
+	text-transform: uppercase;
+	color: #1640A5;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+div#header-title span{
+	color: #D21E17;
+}
+div#logout{
+	padding: 30px;
+}
+div#logout div#logout-child{
+	float: right;
+}
+div#logout-child > a > span{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #1640A5;
+}
+div#logout-child > a >span:hover{
+	color: #D21E17;
+	text-decoration: none;
+}
+div#logout-child > a >img{
+	width: 40px;
+	height: 40px;
+}

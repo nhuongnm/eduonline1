@@ -1,0 +1,30 @@
+div#sidebar{
+	min-height: 603px;
+	background: #F0F1EC;
+}
+div#sidebar > div{
+	margin-top: 50px
+}
+div#sidebar > div > h4{
+	color: #ffffff;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	background: #1640A5;
+	padding: 15px 3px;
+	margin: 0px;
+}
+div#sidebar > div > img{
+	width: 100%;
+	height: 100%;
+}
+div#sidebar > div > h5{
+	background: #1640A5;
+	color: #ffffff;
+	font-size: 1.0em;
+	margin: 0px;
+	border-bottom: 1px solid #ffffff;
+	padding: 5px 0px;
+}
+div#sidebar > div > h5 > span{
+	padding: 8px 8px;
+}

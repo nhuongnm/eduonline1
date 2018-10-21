@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="eps_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9b261696-b407-4c79-8e6c-7a6d30a15ef4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="aa7a4bbc-45f9-4114-8e8a-5adea5c5a48c"/>
+	<parameter name="date_from" class="java.lang.String"/>
+	<parameter name="date_to" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<parameter name="IMAGE_DIR" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="tranID" class="java.lang.Long">
+		<fieldDescription><![CDATA[tranID]]></fieldDescription>
+	</field>
+	<field name="timeCreate" class="java.lang.String">
+		<fieldDescription><![CDATA[timeCreate]]></fieldDescription>
+	</field>
+	<field name="branchName" class="java.lang.String"/>
+	<field name="userName" class="java.lang.String"/>
+	<field name="serviceName" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="0" width="165" height="79" uuid="29bd08bc-3e5b-47e8-a22e-c07275143dd2"/>
+				<imageExpression><![CDATA[$P{IMAGE_DIR}.toString()+"/logo_ncb.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="207" y="14" width="303" height="20" uuid="8d18ecd1-1207-492f-8a53-1c4f64b6ee16"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="14" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[DANH SÁCH GIAO DỊCH TẠI QUẦY]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="246" y="38" width="100" height="20" uuid="64ed064e-e5b4-45c4-9947-6ebe36a4c0d9"/>
+				<textFieldExpression><![CDATA[$P{date_from}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="39" width="100" height="20" uuid="f76d9af3-9c99-4197-9f90-93f6256ee122"/>
+				<textFieldExpression><![CDATA[$P{date_to}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="211" y="38" width="33" height="20" uuid="552cd2fd-94d8-4444-bec7-9815b372897b"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Từ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="39" width="33" height="20" uuid="322e36db-f5c0-4782-a4a2-27626a350702"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Đến]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="59" width="47" height="20" uuid="94f3cde7-3fc9-474c-9854-291ce047acbc"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Người in:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="258" y="59" width="88" height="20" uuid="ff40e317-adb1-4cb4-84ab-1806be77ce71"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{user}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="356" y="59" width="33" height="20" uuid="7605a621-c77c-4906-8949-d687bbb7e30a"/>
+				<textElement>
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ngày:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="390" y="59" width="100" height="20" uuid="2488d6f2-914f-4819-8077-c20b5943cae7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="101" y="2" width="100" height="20" backcolor="#0033FF" uuid="b3563df8-18b3-4c79-9191-944c04085b35"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Người tạo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="0" width="100" height="20" backcolor="#0033FF" uuid="a48e6580-0196-499f-be83-40d75b7043a1"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Tên dịch vụ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="100" height="20" backcolor="#0033FF" uuid="ab4365c3-251d-49a5-ad5f-bfb7391a7244"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[Số tiền]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="2" width="100" height="20" backcolor="#0033FF" uuid="9199d613-9c5f-4639-b04d-11faa2a7099b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Ngày tạo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="2" width="100" height="20" backcolor="#0033FF" uuid="d464e69f-1fb1-4733-a724-2a41a897bbd6"/>
+				<textElement>
+					<font fontName="DejaVu Sans" isBold="true" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Chi nhánh]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="1" width="100" height="20" uuid="4ef781bd-6f06-4937-85a0-d3a2609cff62"/>
+				<textElement>
+					<font fontName="DejaVu Sans" pdfEncoding="Cp1252"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="204" y="1" width="100" height="20" uuid="7b31cb49-5a93-4595-aa45-d1009d789d9b"/>
+				<textElement>
+					<font fontName="DejaVu Sans" pdfEncoding="Cp1252"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{serviceName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="1" width="100" height="20" uuid="a8282491-a82f-42fa-b5ec-b9a50c301198"/>
+				<textElement>
+					<font pdfEncoding="Cp1252"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement x="1" y="1" width="100" height="20" uuid="4305bef5-6231-4702-95af-4b5e092279b4"/>
+				<textElement>
+					<font pdfEncoding="Cp1252"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{timeCreate}.substring(0,8)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="1" width="100" height="20" uuid="cd497891-28d5-4f50-8df2-155136c92adb"/>
+				<textElement>
+					<font fontName="DejaVu Sans" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{branchName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="410" y="13" width="100" height="20" uuid="3ff2ac78-c873-49d3-8f64-c06a75960775"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

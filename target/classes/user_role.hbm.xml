@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hnc.eduonline.model">
+    <class name="com.hnc.eduonline.model.UserRole" table="tbl_user_role">
+        <composite-id>        
+            <key-property name="userid" column="userid" />
+            <key-property name="roleid" column="roleid" />    
+        </composite-id>        
+        <property name="createdTime" column="createdTime" />
+    </class>
+</hibernate-mapping>

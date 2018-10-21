@@ -1,0 +1,35 @@
+body{
+	background: #294790;
+}
+div#wraper{
+	
+}
+form.login-form{
+	width: 350px;
+	background: #ECEAE0;
+	margin: 100px auto;
+	padding: 20px 45px;
+	border-radius: 10px;
+}
+form #login-form-logo{
+	margin: 20px 0px 30px 40px;
+}
+form h3.login-form-title{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+form #login-form-submit{
+	width: 180px;
+	margin: 10px 0px 0px 45px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	background: #C1302C;
+}
+form .login-form-control{
+	height: 48px;
+	border-radius: 12px;
+}
+form div.div-control{
+	margin: 25px 0px;
+}
